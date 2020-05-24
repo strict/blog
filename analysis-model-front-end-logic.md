@@ -18,7 +18,7 @@ React 技术栈为应用开发提供了基础支撑，在此之上依然需要�
 
 **业务模型**
 
-![](https://cdn.nlark.com/yuque/__puml/462f374a06bcd19062e6d5746e1ed120.svg#lake_card_v2=eyJjb2RlIjoi5YmN56uv5bqU55SoLT7mnI3liqHnq6_mjqXlj6M6IHJlcXVlc3Qg5p-l6K-i5p2h5Lu2XG7mnI3liqHnq6_mjqXlj6MtLT7liY3nq6_lupTnlKg6IHJlc3BvbnNlIOiuoeeul-e7k-aenCIsInR5cGUiOiJwdW1sIiwiaWQiOiJic1FINiIsInVybCI6Imh0dHBzOi8vY2RuLm5sYXJrLmNvbS95dXF1ZS9fX3B1bWwvNDYyZjM3NGEwNmJjZDE5MDYyZTZkNTc0NmUxZWQxMjAuc3ZnIiwiY2FyZCI6ImRpYWdyYW0ifQ==)
+![业务模型](./assets/img/analysis-model-front-end-logic-01.png)
 
 各个分析模型应用本质上就是一条查询请求，具体到 UI 界面，查询条件会拆解为各种输入控件供用户进行配置，如：事件下拉菜单、属性下拉菜单、时间选择控件等等，输入控件的值最终组合成完整的查询条件发送给服务端，返回的计算结果渲染为各种图和表格。
 
@@ -130,7 +130,7 @@ export default {
 所有业务组件的 `onChange` 事件回调函数都会将值传递给控制中心，控制中心根据业务组件传入的值以及业务逻辑的整体配置生成完整查询条件，触发查询请求。
 
 **核心流程**
-![分析模型前端业务流程.png](https://cdn.nlark.com/yuque/0/2020/png/89120/1582974232612-d0602744-23c9-432a-8922-1023a02fa689.png#align=left&display=inline&height=338&name=%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B%E5%89%8D%E7%AB%AF%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B.png&originHeight=338&originWidth=1078&size=49366&status=done&style=none&width=1078)
+![分析模型前端业务流程](./assets/img/analysis-model-front-end-logic-02.png)
 
 ### 应用开发思路
 
