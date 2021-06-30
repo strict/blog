@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCRFB3VXK1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HCRFB3VXK1');
+    </script>
+  </head>
+  <body>
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+      <footer class="site-footer">
+        <strong><a href="/">《前端漫游》</a></strong>个人研发经验的分享。
+      </footer>
+    </main>
+  </body>
+</html>

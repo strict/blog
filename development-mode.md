@@ -46,7 +46,7 @@ Application Server 负责提供动态内容，浏览器发起请求后，由 App
 
 以基于 PHP 的 `Smarty` 模板引擎为例，安装 `Smarty` 后，编辑 PHP 文件：
 
-```php
+```html
 <?php
 
 // put full path to Smarty.class.php
@@ -152,8 +152,8 @@ site
 
 **index.tpl**
 
-```php
-{%widget name="common:widget/header/header.tpl"%}
+```html
+{ %widget name="common:widget/header/header.tpl"% }
 ```
 
 ##### 前后端框架
@@ -164,13 +164,13 @@ site
 
 `Smarty` 在 2.0 中引入了插件架构，可以用于在模板中使用自定义功能，如前面的 Smarty 示例代码，其中有一行：
 
-```php
+```html
 $smarty->setPluginsDir('/web/www.example.com/smarty/plugins');
 ```
 
 用于指定插件目录，运行时目录下的所有插件都会被加载，模板中可以直接使用，如：
 
-```php
+```html
 <?php
 /*
  * Smarty plugin
@@ -199,14 +199,14 @@ function smarty_function_eightball($params, Smarty_Internal_Template $template)
 以上面的方式即可以定义一个模板函数插件，在模板中调用就能输出一个随机答案：
 
 ```html
-<p>{%eightball%}<p>
+<p>{ %eightball% }<p>
 ```
 
 ```
 Outlook not so good
 ```
 
-组件规范中引入 `widget` 的语法 `{%widget%}` 实则是 `FIS-PLUS` 提供的一个 `Smarty` 插件，除了 `widget` 插件， `FIS-PLUS` 还提供了一系列与模板相关的插件，当 `display` 某个页面模板时，正是这些一系列插件把所有模板组件组装起来，生成一个完整的 HTML 文档。
+组件规范中引入 `widget` 的语法 `{ %widget% }` 实则是 `FIS-PLUS` 提供的一个 `Smarty` 插件，除了 `widget` 插件， `FIS-PLUS` 还提供了一系列与模板相关的插件，当 `display` 某个页面模板时，正是这些一系列插件把所有模板组件组装起来，生成一个完整的 HTML 文档。
 
 **modJS**
 
