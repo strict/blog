@@ -175,7 +175,7 @@ a {
   }
 
   @include small {
-    padding: 2rem 1.3rem;
+    padding: 2rem 1.6rem 2.5rem;
     font-size: 1rem;
     h1 {
         font-size: 1.8rem !important;
@@ -213,9 +213,10 @@ a {
   }
 
   h1 {
-      margin: 0 0 0.75em;
+      margin: 0 0 0.9em;
       font-size: 2.5rem;
       font-weight: 700;
+      line-height: 1.2;
   }
 
   h3 {
